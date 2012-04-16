@@ -6,3 +6,7 @@ haxelib:
 	rm -f nape-hackslib.zip ; \
 	zip -r nape-hackslib . ; \
 	haxelib test nape-hackslib.zip
+
+tar:
+	rm -rf nape-hacks.tar.gz
+	tar cvfz nape-hacks.tar.gz src Makefile remotes version
