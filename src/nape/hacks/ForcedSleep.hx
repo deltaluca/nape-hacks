@@ -5,7 +5,12 @@ import nape.constraint.Constraint;
 import nape.phys.Compound;
 import nape.space.Space;
 
-import zpp_nape.dynamics.Arbiter.ZPP_Arbiter;
+//different import for swc (using externs) or haxe (yay)
+#if swc
+	import zpp_nape.dynamics.ZPP_Arbiter;
+#else
+	import zpp_nape.dynamics.Arbiter.ZPP_Arbiter;
+#end
 
 @:keep class ForcedSleep {
 	public static function sleepBody(body:Body) {

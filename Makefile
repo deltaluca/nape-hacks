@@ -1,5 +1,5 @@
 swc:
-	haxe -cp src -cp / -cp ../nape/externs --macro "include('nape.hacks')" -swf hacks.swc -swf-version 10 --dead-code-elimination
+	haxe -cp src -cp / -cp ../nape/externs --macro "include('nape.hacks')" -swf hacks.swc -swf-version 10 --dead-code-elimination -D swc
 
 haxelib:
 	cd src ; \
