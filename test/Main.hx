@@ -7,6 +7,7 @@ import nape.geom.Vec2;
 import nape.util.ShapeDebug;
 
 import nape.hacks.ForcedSleep;
+using nape.hacks.ForcedSleep;
 
 class Main {
 	static function main() {
@@ -27,17 +28,17 @@ class Main {
 			var box = new Body();
 			box.shapes.add(new Polygon(Polygon.box(15,15)));
 			box.position.setxy(100*Std.int(i/5)+50,100*(i%5)+50);
-			ForcedSleep.addSleepingBody(space,box);
+			space.addSleepingBody(box);
 
 			var circle = new Body();
 			circle.shapes.add(new Circle(15));
 			circle.position.set(box.position);
 			circle.position.y += 35;
-			ForcedSleep.addSleepingBody(space,circle);
+			space.addSleepingBody(circle);
 
 			var mid = box.position.add(circle.position).mul(0.5);
 			var link = new PivotJoint(box,circle,box.worldToLocal(mid),circle.worldToLocal(mid));
-			ForcedSleep.addSleepingConstraint(space,link);
+			space.addSleepingConstraint(link);
 		}
 
 		var hand = new PivotJoint(space.world,null,new Vec2(), new Vec2());

@@ -5,7 +5,7 @@ import nape.constraint.Constraint;
 import nape.phys.Compound;
 import nape.space.Space;
 
-import zpp_nape.dynamics.Arbiter;
+import zpp_nape.dynamics.Arbiter.ZPP_Arbiter;
 
 @:keep class ForcedSleep {
 	public static function sleepBody(body:Body) {
