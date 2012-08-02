@@ -6,7 +6,7 @@ import nape.phys.Compound;
 import nape.space.Space;
 
 //different import for swc (using externs) or haxe (yay)
-#if swc
+#if nape_swc
 	import zpp_nape.dynamics.ZPP_Arbiter;
 #else
 	import zpp_nape.dynamics.Arbiter.ZPP_Arbiter;
@@ -86,7 +86,7 @@ import nape.space.Space;
 		for(b in set) {
 			if(b.space==null) throw "Error: This hack requires Body's to already be in a Space regarding body found during sleepConnected";
 
-			if(b!=b.space.world) 
+			if(b!=b.space.world)
 				sleepBody(b);
 
 			for(c in b.constraints) sleepConstraint(c);
@@ -133,8 +133,8 @@ import nape.space.Space;
 			b.validate_gravMass();
 			b.validate_worldCOM();
 			b.validate_axis();
-		
-			for(shape in body.shapes) {	
+
+			for(shape in body.shapes) {
 				var s = shape.zpp_inner;
 				if(s.isPolygon())
 					s.polygon.validate_gaxi();
