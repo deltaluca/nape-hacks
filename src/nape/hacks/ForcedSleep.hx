@@ -6,7 +6,7 @@ import nape.phys.Compound;
 import nape.space.Space;
 
 //different import for swc (using externs) or haxe (yay)
-#if swc
+#if nape_swc
 	import zpp_nape.dynamics.ZPP_Arbiter;
 #else
 	import zpp_nape.dynamics.Arbiter.ZPP_Arbiter;
