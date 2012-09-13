@@ -51,6 +51,21 @@ import nape.space.Space;
 			arbi = arbi.next;
 		}
 
+		if(!body.isStatic()) {
+			b.validate_mass();
+			b.validate_inertia();
+			b.validate_aabb();
+			b.validate_gravMass();
+			b.validate_worldCOM();
+			b.validate_axis();
+
+			for(shape in body.shapes) {
+				var s = shape.zpp_inner;
+				if(s.isPolygon())
+					s.polygon.validate_gaxi();
+			}
+		}
+
 		if(!b.space.bphase.is_sweep)
 			for(s in body.shapes) b.space.bphase.sync(s.zpp_inner);
 	}
