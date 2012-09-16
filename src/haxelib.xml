@@ -5,5 +5,5 @@
 	<tag v="cross"/>
 	<tag v="game"/>
 	<description>Hacky (but stable) additional features for Nape.</description>
-	<version name="1.0">Forced sleeping of objects + addition of already sleeping objects to a Space.</version>
+	<version name="1.2">Fix for bugs regarding forced sleep of Body.</version>
 </project>
