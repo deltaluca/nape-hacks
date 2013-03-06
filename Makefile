@@ -4,7 +4,7 @@ test:
 	debugfp test.swf
 
 swc:
-	haxe -cp src -cp / -cp ../nape/externs --macro "include('nape.hacks')" -swf nape-hacks.swc -swf-version 10 --dce full -D nape_swc -D haxe3
+	haxe -cp src -cp / -cp ../nape/externs --macro "include('nape.hacks')" -swf nape-hacks.swc -swf-version 10 -dce full -D nape_swc -D haxe3
 
 haxelib:
 	cd src ; \

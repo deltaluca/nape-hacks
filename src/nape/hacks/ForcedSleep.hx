@@ -12,6 +12,10 @@ import nape.space.Space;
 	import zpp_nape.dynamics.Arbiter.ZPP_Arbiter;
 #end
 
+#if haxe3
+    typedef IntHash<T> = Map<Int,T>;
+#end
+
 /**
  * Methods for manual sleeping and insertion of sleeping objects to a Space.
  * <br/><br/>
