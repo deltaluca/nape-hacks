@@ -1,0 +1,13 @@
+{
+    "name":         "nape-hacks",
+    "url":          "https://github.com/deltaluca/nape-hacks",
+    "license":      "BSD",
+    "tags":         ["cross", "game"],
+    "description":  "Hacky (but stable) additional features for Nape.",
+    "version":      "2.0.1",
+    "releasenote":  "First release on new haxelib",
+    "contributors": ["deltaluca"],
+    "dependencies": {
+        "nape" : ""
+    }
+}
