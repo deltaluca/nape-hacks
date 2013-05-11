@@ -10,7 +10,7 @@ haxelib:
 	cd src ; \
 	rm -f nape-hackslib.zip ; \
 	zip -r nape-hackslib . ; \
-	haxelib test nape-hackslib.zip
+	haxelib local nape-hackslib.zip
 
 clean:
 	rm nape-hacks.swc

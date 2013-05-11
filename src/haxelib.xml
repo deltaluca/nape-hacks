@@ -1,9 +1,0 @@
-<project name="nape-hacks" url="https://github.com/deltaluca/nape-hacks" license="BSD">
-	<depends name="nape"/>
-
-	<user name="deltaluca"/>
-	<tag v="cross"/>
-	<tag v="game"/>
-	<description>Hacky (but stable) additional features for Nape.</description>
-	<version name="2.0.1">Updated for Haxe 3.</version>
-</project>

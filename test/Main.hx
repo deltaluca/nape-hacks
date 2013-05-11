@@ -37,7 +37,7 @@ class Main {
 			space.addSleepingBody(circle);
 
 			var mid = box.position.add(circle.position).mul(0.5);
-			var link = new PivotJoint(box,circle,box.worldToLocal(mid),circle.worldToLocal(mid));
+			var link = new PivotJoint(box,circle,box.worldPointToLocal(mid),circle.worldPointToLocal(mid));
 			space.addSleepingConstraint(link);
 		}
 
@@ -50,7 +50,7 @@ class Main {
 			var mp = new Vec2(c.mouseX,c.mouseY);
 			for(b in space.bodiesUnderPoint(mp)) {
 				hand.body2 = b;
-				hand.anchor2 = b.worldToLocal(mp);
+				hand.anchor2 = b.worldPointToLocal(mp);
 				hand.active = true;
 				break;
 			}
